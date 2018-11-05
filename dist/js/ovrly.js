@@ -1,5 +1,18 @@
+/*!
+ * Ovrly v1.0.0
+ * by Dirk Einecke
+ *
+ * More info:
+ * https://github.com/dirkeinecke/ovrly
+ *
+ * Copyright 2018 Dirk Einecke
+ * Released under the MIT license
+ * https://github.com/dirkeinecke/ovrly/blob/master/LICENSE
+ *
+ */
+ 
 function ovrly(link) {
-  const yOffset = 0; /*window.pageYOffset;*/
+  const yOffset = 0;
 
   let overlay = document.createElement('div');
   overlay.setAttribute('id','ovrly');
