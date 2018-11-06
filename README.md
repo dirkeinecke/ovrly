@@ -14,9 +14,9 @@ by [Dirk Einecke](http://www.dirkeinecke.de)
 1. [Download](https://github.com/dirkeinecke/ovrly/archive/master.zip) the latest version as a zip file.
 2. Open up the zip file and take a peek at the working example that is included in the `/examples` folder.
 3. Ready to set Ovrly up on your page? Start by including the Ovrly JavaScript. You can grab these file from the `/dist/js` folder.
-   - Include the JavaScript at the bottom of your page before the closing `</body>` tag:
+   - Include the JavaScript at the bottom of your page before the closing `</body>` tag:  
      `<script src="path/to/ovrly.js"></script>`
-3. Add a `onclick` attribute to any image link. For example:
+3. Add a `onclick` attribute to any image link. For example:  
    `<a href="images/image-1.jpg" onclick="return ovrly(this);">Image #1</a>`
    
 ## License
