@@ -48,21 +48,41 @@ function ovrly(link) {
     ovrlyClose
   );
 
+  window.addEventListener(
+    'scroll',
+    ovrlyClose
+  );
+
   return false;
 }
 
-function ovrlyClose(event) {  
+function ovrlyClose(event) {
+  var fire = false;
+
   if ('key' in event) {
     if (event.key == 'Escape' || event.key == 'Esc') {
-      const element = document.getElementById('ovrly');
-      document.body.style.overflow = element.getAttribute('data-body-overflow');
-      element.parentNode.removeChild(element);
-
-      document.removeEventListener(
-        'keydown',
-        ovrlyClose
-      );
+      fire = true;
     }
+  } else if ('type' in event) {
+    if (event.type == 'scroll') {
+      fire = true;
+    }
+  }
+
+  if (fire == true) {
+    const element = document.getElementById('ovrly');
+    document.body.style.overflow = element.getAttribute('data-body-overflow');
+    element.parentNode.removeChild(element);
+
+    document.removeEventListener(
+      'keydown',
+      ovrlyClose
+    );
+
+    window.removeEventListener(
+      'scroll',
+      ovrlyClose
+    );
   }
 
   return false;
