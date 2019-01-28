@@ -14,6 +14,7 @@
 var ovrly = {
 
   open: function(link) {
+    const zIndex = Number.MAX_SAFE_INTEGER;
     const yOffset = 0;
   
     let overlay = document.createElement('div');
@@ -21,7 +22,7 @@ var ovrly = {
     overlay.setAttribute('data-body-overflow', document.body.style.overflow);
     overlay.setAttribute(
       'style',
-      'position:fixed;z-index:100;top:'+yOffset+'px;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5);text-align:center;box-sizing:border-box;padding:50px;'
+      'position:fixed;z-index:'+zIndex+';top:'+yOffset+'px;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5);text-align:center;box-sizing:border-box;padding:50px;'
     );
     let image = document.createElement('img');
     image.setAttribute('src',link.href);
@@ -36,7 +37,7 @@ var ovrly = {
     closeButton.setAttribute('onclick', 'return ovrly.close({\'key\':\'Escape\'});');
     closeButton.setAttribute(
       'style',
-      'position:absolute;z-index:101;top:0;right:0;text-decoration:none;color:#fff;font-size:30px;padding:10px 15px 10px 10px;'
+      'position:absolute;z-index:'+(zIndex+1)+';top:0;right:0;text-decoration:none;color:#fff;font-size:30px;padding:10px 15px 10px 10px;'
     );
     const closeButtonText = document.createTextNode('×');
     closeButton.appendChild(closeButtonText);
