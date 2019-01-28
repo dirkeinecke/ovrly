@@ -5,7 +5,7 @@
  * More info:
  * https://github.com/dirkeinecke/ovrly
  *
- * Copyright 2018 Dirk Einecke
+ * Copyright 2018, 2019 Dirk Einecke
  * Released under the MIT license
  * https://github.com/dirkeinecke/ovrly/blob/master/LICENSE
  *
