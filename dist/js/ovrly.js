@@ -19,7 +19,6 @@ var ovrly = {
   
     let overlay = document.createElement('div');
     overlay.setAttribute('id','ovrly');
-    overlay.setAttribute('data-body-overflow', document.body.style.overflow);
     overlay.setAttribute(
       'style',
       'position:fixed;z-index:'+zIndex+';top:'+yOffset+'px;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5);text-align:center;box-sizing:border-box;padding:50px;'
@@ -44,7 +43,6 @@ var ovrly = {
     overlay.appendChild(closeButton);
   
     document.body.appendChild(overlay);
-    document.body.style.overflow = 'hidden';
   
     document.addEventListener(
       'keydown',
@@ -79,7 +77,6 @@ var ovrly = {
   
     if (fire == true) {
       const element = document.getElementById('ovrly');
-      document.body.style.overflow = element.getAttribute('data-body-overflow');
       element.parentNode.removeChild(element);
   
       document.removeEventListener(
