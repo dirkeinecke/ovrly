@@ -28,7 +28,7 @@ var ovrly = {
     image.setAttribute('src',link.href);
     image.setAttribute(
       'style',
-      'width:auto;max-width:100%;height:auto;max-height:100%;margin:auto;position:relative;top:50%;transform:perspective(1px) translateY(-50%);'
+      'width:auto;max-width:100%;height:auto;max-height:100%;margin:auto;position:relative;top:50%;transform:perspective(1px) translateY(-50%);cursor:zoom-out;'
     );
     overlay.appendChild(image);
   
@@ -55,6 +55,11 @@ var ovrly = {
       'scroll',
       ovrly.close
     );
+
+    document.getElementById('ovrly').addEventListener(
+      'click',
+      ovrly.close
+    );
   
     return false;
   },
@@ -67,7 +72,7 @@ var ovrly = {
         fire = true;
       }
     } else if ('type' in event) {
-      if (event.type == 'scroll') {
+      if (event.type == 'scroll' || event.type == 'click') {
         fire = true;
       }
     }
