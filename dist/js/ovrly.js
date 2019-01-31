@@ -1,5 +1,5 @@
 /*!
- * Ovrly v1.0.0
+ * Ovrly v1.1.0
  * by Dirk Einecke
  *
  * More info:
