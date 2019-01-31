@@ -17,7 +17,7 @@ by [Dirk Einecke](http://www.dirkeinecke.de)
    - Include the JavaScript at the bottom of your page before the closing `</body>` tag:  
      `<script src="path/to/ovrly.js"></script>`
 3. Add a `onclick` attribute to any image link. For example:  
-   `<a href="images/image-1.jpg" onclick="return ovrly(this);">Image #1</a>`
+   `<a href="images/image-1.jpg" onclick="return ovrly.open(this);">Image #1</a>`
    
 ## License
 
